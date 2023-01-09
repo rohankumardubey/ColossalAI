@@ -6,6 +6,7 @@ RUN conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoo
 # install apex
 RUN git clone https://github.com/NVIDIA/apex && \
     cd apex && \
+    pip install packaging && \
     pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" --global-option="--fast_layer_norm" ./
 
 # install colossalai
